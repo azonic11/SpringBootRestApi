@@ -1,5 +1,6 @@
 package com.crud.constrollers;
 
+import java.text.ParseException;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ public class CustomerController {
 	
 	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping("/customers") 
-	public List<Customer> getCustomers() {
+	public List<Customer> getCustomers() throws ParseException {
 		return customerService.getAllCustomers();
 	}
 	
